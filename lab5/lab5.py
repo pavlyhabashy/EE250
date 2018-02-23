@@ -1,11 +1,9 @@
-import Adafruit_GPIO as GPIO
-import Adafruit_GPIO.SPI as SPI
+import RPi.GPIO as GPIO
 import time
 
-def Main()
+def Main():
 	LED = 12
-	GPIO.setup(LED, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.setup(LED, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+	GPIO.setup(LED, GPIO.OUT)
 	while True:
 		GPIO.output(LED, 1)
 		time.sleep(0.5)
