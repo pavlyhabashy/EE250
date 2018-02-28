@@ -26,14 +26,14 @@ def Main():
 		time.sleep(0.5)
 
 		# Read all the ADC channel values in a list.
-	    values = [0]*8
-	    for i in range(8):
+	    values = [0]*2
+	    for i in range(2):
 	        # The read_adc function will get the value of the specified channel (0-7).
 	        values[i] = mcp.read_adc(i)
 	    # Print the ADC values.
-	    print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
+	    print('| {0:>4} | {1:>4}'.format(*values))
 	    # Pause for half a second.
-	    time.sleep(0.5)
+	    time.sleep(5)
 
 if __name__ == '__main__':
     Main()
